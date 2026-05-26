@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung — Calltracker</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px; line-height: 1.6; color: #1a1a1a; background: #fafafa; }
+  @media (prefers-color-scheme: dark) { body { color: #e5e5e5; background: #0f0f11; } a { color: #38bdf8; } }
+  h1 { font-size: 1.8em; margin-bottom: 8px; }
+  h2 { font-size: 1.3em; margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+  @media (prefers-color-scheme: dark) { h2 { border-bottom-color: #333; } }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 24px; }
+  ul { padding-left: 22px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  @media (prefers-color-scheme: dark) { th, td { border-bottom-color: #333; } }
+  th { font-weight: 600; }
+  a { color: #0284c7; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #ddd; font-size: 0.85em; color: #888; }
+  @media (prefers-color-scheme: dark) { footer { border-top-color: #333; } }
+</style>
+</head>
+<body>
+
+<h1>Datenschutzerklärung</h1>
+<p class="meta">Stand: 10. Mai 2026 · App: Calltracker (iOS)</p>
+
+<h2>1. Verantwortlicher</h2>
+<p>
+  Pascal Capeder<br>
+  Schweiz<br>
+  E-Mail: <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>
+</p>
+
+<h2>2. Was diese App tut</h2>
+<p>
+  Calltracker ist eine iOS-App zum Erfassen von Akquise-Anrufen (Cold Calls).
+  Du trackst pro Session, wie viele Anrufe du gemacht hast, wie viele du erreicht hast
+  und wie viele Termine du vereinbart hast. Die App berechnet daraus deine Performance
+  (Connect-Rate, Closing-Rate, Wochen-Streak, XP) und zeigt dir Insights.
+</p>
+
+<h2>3. Welche Daten werden verarbeitet</h2>
+<table>
+  <thead>
+    <tr><th>Datenkategorie</th><th>Zweck</th><th>Verarbeitet von</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>E-Mail-Adresse</td>
+      <td>Login / Account-Verwaltung</td>
+      <td>Supabase (EU)</td>
+    </tr>
+    <tr>
+      <td>Session-Daten (Anrufe, Termine, Notizen, Zeitstempel)</td>
+      <td>Kernfunktion der App, Synchronisierung zwischen deinen Geräten</td>
+      <td>Supabase (EU) + lokal auf deinem Gerät</td>
+    </tr>
+    <tr>
+      <td>Profil-Einstellungen (Tagesziel, Wochenziel, Reminder)</td>
+      <td>Personalisierung</td>
+      <td>Supabase (EU) + lokal</td>
+    </tr>
+    <tr>
+      <td>Achievement-Fortschritt, XP, Streaks</td>
+      <td>Gamification</td>
+      <td>Lokal auf deinem Gerät</td>
+    </tr>
+    <tr>
+      <td>Crash-Reports (anonymisiert, ohne Identifier)</td>
+      <td>Fehlerbehebung</td>
+      <td>Sentry (EU/USA, je nach Konfig)</td>
+    </tr>
+    <tr>
+      <td>Produkt-Analytics (pseudonymisiert per UUID, keine E-Mail)</td>
+      <td>Verbesserung der App</td>
+      <td>PostHog (EU)</td>
+    </tr>
+    <tr>
+      <td>Subscription-Status (geplant: Pro-Plan + Ablaufdatum)</td>
+      <td>Freischaltung Premium-Features</td>
+      <td>Apple App Store + RevenueCat + Supabase (EU)</td>
+    </tr>
+    <tr>
+      <td>Push-Benachrichtigungen (lokal geplant)</td>
+      <td>Tägliche Erinnerung an deine Akquise-Routine</td>
+      <td>Apple Push (nur lokal generiert, kein Cloud-Server)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. Rechtsgrundlage</h2>
+<p>
+  Verarbeitung deiner Daten erfolgt auf Basis von Art. 6 Abs. 1 lit. b DSGVO
+  (Vertragserfüllung — du nutzt die App und brauchst dafür ein Konto) und
+  lit. f DSGVO (berechtigtes Interesse — Crashs, Analytics).
+  Für Push-Benachrichtigungen gilt deine Einwilligung über das iOS-Berechtigungs-Dialog.
+</p>
+
+<h2>5. Wie lange werden Daten gespeichert</h2>
+<ul>
+  <li><strong>Session-/Profil-Daten:</strong> solange dein Account aktiv ist. Bei Account-Löschung werden alle Daten innerhalb von 30 Tagen entfernt.</li>
+  <li><strong>Crash-Reports:</strong> 90 Tage (Sentry-Default).</li>
+  <li><strong>Analytics-Events:</strong> 12 Monate, danach anonymisiert/aggregiert.</li>
+  <li><strong>Daten auf deinem Gerät:</strong> bleiben in der App-Datenbank, bis du die App deinstallierst.</li>
+</ul>
+
+<h2>6. Deine Rechte</h2>
+<p>Du hast jederzeit das Recht auf:</p>
+<ul>
+  <li>Auskunft über deine gespeicherten Daten (Art. 15 DSGVO)</li>
+  <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+  <li>Löschung deiner Daten (Art. 17 DSGVO) — schreib uns einfach eine E-Mail</li>
+  <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+  <li>Datenübertragbarkeit (Art. 20 DSGVO) — Export deiner Sessions als CSV ist geplant</li>
+  <li>Widerruf deiner Einwilligung — direkt in den iOS-Einstellungen (Push-Benachrichtigungen) oder per E-Mail</li>
+  <li>Beschwerde bei einer Datenschutz-Aufsichtsbehörde (in der Schweiz: EDÖB)</li>
+</ul>
+
+<h2>7. Drittanbieter</h2>
+<ul>
+  <li><strong>Supabase</strong> (Datenbank + Auth, EU-Region) — <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
+  <li><strong>Sentry</strong> (Crash-Reporting) — <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Privacy</a></li>
+  <li><strong>PostHog</strong> (Product-Analytics, EU) — <a href="https://posthog.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
+  <li><strong>Apple</strong> (App Store, In-App-Purchase, Push) — <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy</a></li>
+  <li><strong>RevenueCat</strong> (Abo-Verwaltung, geplant ab v0.8) — <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
+</ul>
+
+<h2>8. Cookies / Tracking</h2>
+<p>
+  Diese App nutzt keine Cookies und kein Cross-App-Tracking. PostHog-Analytics
+  identifiziert dich nur über eine zufällige UUID, niemals über E-Mail oder andere
+  persönliche Daten. Sentry strippt vor dem Upload alle Identifier (E-Mail, IP, Username).
+</p>
+
+<h2>9. Änderungen</h2>
+<p>
+  Diese Datenschutzerklärung kann angepasst werden, wenn neue Features hinzukommen
+  oder Drittanbieter wechseln. Die aktuelle Version findest du immer unter
+  <a href="https://capederfl.github.io/calltracker/privacy.html">capederfl.github.io/calltracker/privacy.html</a>.
+</p>
+
+<footer>
+  <p>← <a href="index.html">Zurück zur Übersicht</a> · <a href="terms.html">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
