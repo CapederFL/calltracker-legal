@@ -25,7 +25,7 @@
 <body>
 
 <h1>Datenschutzerklärung</h1>
-<p class="meta">Stand: 10. Mai 2026 · App: Calltracker (iOS)</p>
+<p class="meta">Stand: 12. September 2026 · App: Calltracker (iOS)</p>
 
 <h2>1. Verantwortlicher</h2>
 <p>
@@ -36,10 +36,10 @@
 
 <h2>2. Was diese App tut</h2>
 <p>
-  Calltracker ist eine iOS-App zum Erfassen von Akquise-Anrufen (Cold Calls).
-  Du trackst pro Session, wie viele Anrufe du gemacht hast, wie viele du erreicht hast
-  und wie viele Termine du vereinbart hast. Die App berechnet daraus deine Performance
-  (Connect-Rate, Closing-Rate, Wochen-Streak, XP) und zeigt dir Insights.
+  Calltracker ist eine iOS-App zum Erfassen von Akquise-Anrufen. Du trackst pro Session,
+  wie viele Anrufe du gemacht hast, wie viele du erreicht hast und wie viele Termine
+  daraus wurden. Die App berechnet daraus deine Kennzahlen (Connect-Rate, Closing-Rate,
+  Wochen-Streak, XP) und zeigt dir Auswertungen.
 </p>
 
 <h2>3. Welche Daten werden verarbeitet</h2>
@@ -49,96 +49,155 @@
   </thead>
   <tbody>
     <tr>
-      <td>E-Mail-Adresse</td>
-      <td>Login / Account-Verwaltung</td>
+      <td>E-Mail-Adresse, optional dein Name</td>
+      <td>Anmeldung und Kontoverwaltung</td>
       <td>Supabase (EU)</td>
     </tr>
     <tr>
-      <td>Session-Daten (Anrufe, Termine, Notizen, Zeitstempel)</td>
+      <td>Session-Daten: Anrufe, Erreichte, Termine, Zeitstempel, Notizen und Termin-Notizen</td>
       <td>Kernfunktion der App, Synchronisierung zwischen deinen Geräten</td>
       <td>Supabase (EU) + lokal auf deinem Gerät</td>
     </tr>
     <tr>
-      <td>Profil-Einstellungen (Tagesziel, Wochenziel, Reminder)</td>
+      <td>Profil-Einstellungen: Tagesziel, Wochenziel, Erinnerungen, Zeitzone</td>
       <td>Personalisierung</td>
       <td>Supabase (EU) + lokal</td>
     </tr>
     <tr>
-      <td>Achievement-Fortschritt, XP, Streaks</td>
+      <td>Achievements, XP, Streaks</td>
       <td>Gamification</td>
-      <td>Lokal auf deinem Gerät</td>
+      <td>Supabase (EU) + lokal</td>
     </tr>
     <tr>
-      <td>Crash-Reports (anonymisiert, ohne Identifier)</td>
-      <td>Fehlerbehebung</td>
-      <td>Sentry (EU/USA, je nach Konfig)</td>
+      <td>Rückrufe, Skripte, Umsatz-Angaben (optionale Zusatzmodule)</td>
+      <td>Kernfunktion der jeweiligen Module</td>
+      <td>Nur lokal auf deinem Gerät</td>
     </tr>
     <tr>
-      <td>Produkt-Analytics (pseudonymisiert per UUID, keine E-Mail)</td>
+      <td>Abo-Status: Pro-Plan, Ablaufdatum, Art des Zeitraums</td>
+      <td>Freischaltung der Pro-Funktionen</td>
+      <td>Apple App Store + RevenueCat + lokal</td>
+    </tr>
+    <tr>
+      <td>
+        Nutzungsereignisse: welche Funktionen du wann benutzt (Session gestartet und
+        beendet, Anruf erfasst, Bildschirm geöffnet, Paywall gesehen, Kauf
+        abgeschlossen). <strong>Ohne</strong> deine Notizen, Skripttexte oder Namen
+        von Kontakten.
+      </td>
       <td>Verbesserung der App</td>
       <td>PostHog (EU)</td>
     </tr>
     <tr>
-      <td>Subscription-Status (geplant: Pro-Plan + Ablaufdatum)</td>
-      <td>Freischaltung Premium-Features</td>
-      <td>Apple App Store + RevenueCat + Supabase (EU)</td>
+      <td>
+        Fehler- und Absturzmeldungen: Fehlertext und technischer Stack-Trace,
+        einschliesslich unveränderter Meldungen von Supabase
+      </td>
+      <td>Fehlersuche</td>
+      <td>PostHog (EU)</td>
     </tr>
     <tr>
-      <td>Push-Benachrichtigungen (lokal geplant)</td>
+      <td>
+        Deine Konto-Kennung (eine UUID) als Zuordnung zu allen oben genannten
+        Ereignissen, sowie eine gerätelokale Zufalls-Kennung, solange du nicht
+        angemeldet bist
+      </td>
+      <td>Auswertung über mehrere Sitzungen hinweg</td>
+      <td>PostHog (EU)</td>
+    </tr>
+    <tr>
+      <td>
+        IP-Adresse und daraus abgeleitet dein <strong>ungefährer Standort auf
+        Landesebene</strong>
+      </td>
+      <td>Technische Übertragung; Auswertung nach Ländern</td>
+      <td>Supabase (EU), PostHog (EU)</td>
+    </tr>
+    <tr>
+      <td>Erinnerungen und Benachrichtigungen</td>
       <td>Tägliche Erinnerung an deine Akquise-Routine</td>
-      <td>Apple Push (nur lokal generiert, kein Cloud-Server)</td>
+      <td>
+        Werden ausschliesslich <strong>auf deinem Gerät</strong> geplant und ausgelöst.
+        Es wird kein Push-Token an einen Server übertragen.
+      </td>
+    </tr>
+    <tr>
+      <td>Kalender- und Erinnerungs-Einträge</td>
+      <td>Termine aus der App in deinen Kalender übernehmen</td>
+      <td>
+        Nur lokal in deinen Apple-Kalender bzw. deine Erinnerungen — nur nach deiner
+        ausdrücklichen Freigabe und nur auf deinem Gerät
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2>4. Rechtsgrundlage</h2>
-<p>
-  Verarbeitung deiner Daten erfolgt auf Basis von Art. 6 Abs. 1 lit. b DSGVO
-  (Vertragserfüllung — du nutzt die App und brauchst dafür ein Konto) und
-  lit. f DSGVO (berechtigtes Interesse — Crashs, Analytics).
-  Für Push-Benachrichtigungen gilt deine Einwilligung über das iOS-Berechtigungs-Dialog.
-</p>
-
-<h2>5. Wie lange werden Daten gespeichert</h2>
+<h2>4. Was ausdrücklich NICHT erhoben wird</h2>
 <ul>
-  <li><strong>Session-/Profil-Daten:</strong> solange dein Account aktiv ist. Bei Account-Löschung werden alle Daten innerhalb von 30 Tagen entfernt.</li>
-  <li><strong>Crash-Reports:</strong> 90 Tage (Sentry-Default).</li>
-  <li><strong>Analytics-Events:</strong> 12 Monate, danach anonymisiert/aggregiert.</li>
-  <li><strong>Daten auf deinem Gerät:</strong> bleiben in der App-Datenbank, bis du die App deinstallierst.</li>
+  <li>Keine Kontakte, kein Adressbuch, kein Telefonprotokoll. Die App weiss nicht, wen du anrufst — sie zählt nur, dass du angerufen hast.</li>
+  <li>Kein Mikrofon, keine Kamera, keine Gesprächsaufzeichnung.</li>
+  <li>Kein genauer Standort, kein GPS.</li>
+  <li>Keine Bildschirmaufzeichnungen (Session Replay ist im Code abgeschaltet).</li>
+  <li>Keine Zahlungsdaten. Käufe wickelt Apple ab; die App sieht weder Kartendaten noch Beträge.</li>
+  <li>Deine Notizen, Termin-Notizen und Skripttexte werden <strong>nicht</strong> an PostHog übertragen. Sie liegen in deinem Konto bei Supabase und auf deinem Gerät.</li>
 </ul>
 
-<h2>6. Deine Rechte</h2>
+<h2>5. Rechtsgrundlage</h2>
+<p>
+  Die Verarbeitung erfolgt auf Basis von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung —
+  du nutzt die App und brauchst dafür ein Konto) und lit. f DSGVO (berechtigtes Interesse
+  an Fehlersuche und an der Verbesserung der App). Für Benachrichtigungen, Kalender- und
+  Erinnerungszugriff gilt deine Einwilligung über den jeweiligen iOS-Berechtigungsdialog,
+  die du in den iOS-Einstellungen jederzeit widerrufen kannst.
+</p>
+
+<h2>6. Wie lange werden Daten gespeichert</h2>
+<ul>
+  <li><strong>Session-, Profil- und Kontodaten:</strong> solange dein Konto besteht. Löschst du dein Konto in der App, werden Konto und sämtliche Daten auf dem Server <strong>sofort</strong> gelöscht, nicht erst nach einer Frist.</li>
+  <li><strong>Nutzungs-, Fehler- und Absturzereignisse:</strong> ein Jahr bei PostHog, danach automatische Löschung.</li>
+  <li><strong>Daten auf deinem Gerät:</strong> bleiben in der App, bis du dich abmeldest oder die App löschst.</li>
+</ul>
+
+<h2>7. Deine Rechte</h2>
 <p>Du hast jederzeit das Recht auf:</p>
 <ul>
   <li>Auskunft über deine gespeicherten Daten (Art. 15 DSGVO)</li>
   <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
-  <li>Löschung deiner Daten (Art. 17 DSGVO) — schreib uns einfach eine E-Mail</li>
+  <li>Löschung deiner Daten (Art. 17 DSGVO) — direkt in der App unter Profil, oder per E-Mail</li>
   <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-  <li>Datenübertragbarkeit (Art. 20 DSGVO) — Export deiner Sessions als CSV ist geplant</li>
-  <li>Widerruf deiner Einwilligung — direkt in den iOS-Einstellungen (Push-Benachrichtigungen) oder per E-Mail</li>
-  <li>Beschwerde bei einer Datenschutz-Aufsichtsbehörde (in Liechtenstein: Datenschutzstelle des Fürstentums Liechtenstein)</li>
+  <li>Datenübertragbarkeit (Art. 20 DSGVO) — deine Sessions und Ereignisse lassen sich in der App als CSV exportieren</li>
+  <li><strong>Widerspruch gegen die Analyse-Verarbeitung (Art. 21 DSGVO)</strong> — die App hat dafür derzeit keinen eigenen Schalter. Schreib uns eine E-Mail; wir löschen deine Analyse-Daten und schliessen dich von der weiteren Erfassung aus.</li>
+  <li>Widerruf erteilter Berechtigungen (Benachrichtigungen, Kalender, Erinnerungen) in den iOS-Einstellungen</li>
+  <li>Beschwerde bei einer Aufsichtsbehörde — in Liechtenstein: Datenschutzstelle des Fürstentums Liechtenstein</li>
 </ul>
 
-<h2>7. Drittanbieter</h2>
+<h2>8. Drittanbieter</h2>
 <ul>
-  <li><strong>Supabase</strong> (Datenbank + Auth, EU-Region) — <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
-  <li><strong>Sentry</strong> (Crash-Reporting) — <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Privacy</a></li>
-  <li><strong>PostHog</strong> (Product-Analytics, EU) — <a href="https://posthog.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
-  <li><strong>Apple</strong> (App Store, In-App-Purchase, Push) — <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy</a></li>
-  <li><strong>RevenueCat</strong> (Abo-Verwaltung, geplant ab v0.8) — <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
+  <li><strong>Supabase</strong> (Datenbank und Anmeldung, EU-Region) — <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
+  <li><strong>PostHog</strong> (Produkt-Analyse und Fehlermeldungen, EU-Region) — <a href="https://posthog.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
+  <li><strong>RevenueCat</strong> (Verwaltung der Abos) — <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy</a></li>
+  <li><strong>Apple</strong> (App Store, In-App-Kauf, Benachrichtigungen) — <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy</a></li>
 </ul>
 
-<h2>8. Cookies / Tracking</h2>
+<h2>9. Tracking und Werbung</h2>
 <p>
-  Diese App nutzt keine Cookies und kein Cross-App-Tracking. PostHog-Analytics
-  identifiziert dich nur über eine zufällige UUID, niemals über E-Mail oder andere
-  persönliche Daten. Sentry strippt vor dem Upload alle Identifier (E-Mail, IP, Username).
+  Diese App zeigt keine Werbung, nutzt keine Cookies und verfolgt dich nicht über andere
+  Apps oder Websites hinweg. Es werden keine Daten an Werbenetzwerke oder Datenhändler
+  weitergegeben, und deine Daten werden nicht mit Daten anderer Unternehmen zusammengeführt.
+  Aus diesem Grund fragt die App auch nicht nach der App-Tracking-Erlaubnis von iOS.
+</p>
+<p>
+  Wichtig zur Einordnung: Die Analyse-Ereignisse sind <strong>pseudonym, nicht anonym</strong>.
+  Sie hängen an deiner Konto-Kennung — derselben UUID, unter der auch deine Sessions
+  gespeichert sind. Ein Rückschluss auf deine Person ist damit für uns möglich, für Dritte
+  ohne Zugriff auf unsere Datenbank nicht. Deine E-Mail-Adresse und dein Name werden
+  <strong>nicht</strong> an PostHog übertragen.
 </p>
 
-<h2>9. Änderungen</h2>
+<h2>10. Änderungen</h2>
 <p>
-  Diese Datenschutzerklärung kann angepasst werden, wenn neue Features hinzukommen
-  oder Drittanbieter wechseln. Die aktuelle Version findest du immer unter
+  Diese Datenschutzerklärung wird angepasst, wenn neue Funktionen hinzukommen oder sich
+  Drittanbieter ändern. Die jeweils aktuelle Fassung findest du unter
   <a href="https://capederfl.github.io/calltracker-legal/privacy.html">capederfl.github.io/calltracker-legal/privacy.html</a>.
 </p>
 
