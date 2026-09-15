@@ -19,6 +19,13 @@
   .link-card strong { display: block; font-size: 1.05em; margin-bottom: 2px; }
   .link-card span { font-size: 0.9em; color: #666; }
   @media (prefers-color-scheme: dark) { .link-card span { color: #a0a0b0; } }
+  .kontakt { margin-top: 40px; padding: 20px; background: white; border: 1px solid #ddd; border-radius: 14px; }
+  @media (prefers-color-scheme: dark) { .kontakt { background: #1a1a1f; border-color: #333; } }
+  .kontakt h2 { font-size: 1.2em; margin: 0 0 8px; }
+  .kontakt .mail { font-size: 1.1em; font-weight: 600; }
+  .kontakt ul { margin: 8px 0 0; padding-left: 20px; }
+  .kontakt .en { margin-top: 20px; padding-top: 16px; border-top: 1px solid #ddd; }
+  @media (prefers-color-scheme: dark) { .kontakt .en { border-top-color: #333; } }
   footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid #ddd; font-size: 0.85em; color: #888; text-align: center; }
   @media (prefers-color-scheme: dark) { footer { border-top-color: #333; } }
 </style>
@@ -34,7 +41,7 @@
   <p>
     Calltracker hilft Sales-Profis, ihre Akquise-Anrufe per One-Tap zu tracken,
     Live-Conversion-Rates zu sehen und durch Gamification (Streaks, XP, Achievements)
-    motiviert zu bleiben. Offline-First, mit Insights und Premium-Coaching.
+    motiviert zu bleiben. Offline-First, mit Insights und Pro-Funktionen.
   </p>
 
   <div class="links">
@@ -44,13 +51,39 @@
     </a>
     <a class="link-card" href="terms.html">
       <strong>Nutzungsbedingungen</strong>
-      <span>Bedingungen für App-Kauf und Calltracker Pro Abo</span>
+      <span>Bedingungen für die Nutzung von Calltracker und Calltracker Pro</span>
     </a>
   </div>
+
+  <section class="kontakt" id="support">
+    <h2>Hilfe &amp; Kontakt</h2>
+    <p class="mail"><a href="mailto:capederpas@gmail.com?subject=Calltracker%20Support">capederpas@gmail.com</a></p>
+    <p>Schreib uns bei Fragen, Problemen oder Anliegen zu deinen Daten. Hilfreich sind:</p>
+    <ul>
+      <li>App-Version (Einstellungen → App → Version) und iPhone-Modell</li>
+      <li>was du gemacht hast und was passiert ist, gern mit Screenshot</li>
+    </ul>
+    <p>
+      Deinen Account löschst du direkt in der App (Einstellungen → Account löschen).
+      Einen Export deiner Daten als CSV schicken wir dir auf Anfrage kostenlos zu.
+      Ab App-Version 1.5.2 findest du uns auch in der App unter Einstellungen → Hilfe &amp; Kontakt.
+    </p>
+
+    <div class="en" lang="en">
+      <h2>Help &amp; contact</h2>
+      <p class="mail"><a href="mailto:capederpas@gmail.com?subject=Calltracker%20Support">capederpas@gmail.com</a></p>
+      <p>
+        Write to us with questions, problems or requests about your data — in English or German.
+        Please include your app version (Settings → App → Version), your iPhone model and what happened.
+        You can delete your account in the app (Settings → Delete account). A CSV export of your data
+        is available free of charge on request.
+      </p>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <p>© 2026 Pascal Capeder · <a href="https://github.com/CapederFL/calltracker">Source on GitHub</a></p>
+  <p>© 2026 Pascal Capeder, Liechtenstein · <a href="mailto:capederpas@gmail.com">capederpas@gmail.com</a></p>
 </footer>
 
 </body>
